@@ -1,0 +1,69 @@
+.select {
+  position: absolute;
+  z-index: 30;
+
+  width: 420px;
+  max-height: 136px;
+  overflow-y: scroll;
+
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 10px 0 rgba(0, 44, 92, 0.28);
+}
+
+.select__description {
+  margin-left: 8px;
+
+  font-weight: 400;
+  font-size: 13px;
+  color: #929aa3;
+}
+
+.select__unit {
+  height: 34px;
+  padding: 5px 16px;
+
+  white-space: nowrap;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f6f7f9;
+  }
+
+  &:hover .select__description {
+    font-weight: 700;
+  }
+}
+
+.select-message {
+  padding: 10px 16px;
+
+  font-weight: 400;
+  font-size: 13px;
+  color: #000;
+}
+
+.select__avatar {
+  width: 24px;
+  height: 24px;
+
+  vertical-align: middle;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.select__name {
+  display: inline-block;
+  max-width: 310px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: sub;
+  color: #000;
+}
+
+@media (max-width: 500px) {
+  .select {
+    width: 328px;
+  }
+}

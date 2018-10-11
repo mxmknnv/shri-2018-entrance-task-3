@@ -1,0 +1,47 @@
+.button {
+  padding: 10px 16px;
+  border-radius: 4px;
+
+  font-family: 'Helvetica Neue', 'Open Sans', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0;
+
+  outline: none;
+  border: none;
+  appearance: button;
+  cursor: pointer;
+
+  &_gray {
+    background: #e9ecef;
+    color: #000;
+
+    &:hover {
+      background: #dde0e4;
+    }
+
+    &:active {
+      background: #c8cdd3;
+    }
+  }
+
+  &_blue {
+    background: #007dff;
+    color: #fff;
+
+    &:hover {
+      background: #115efb;
+    }
+
+    &:active {
+      background: #0b2afa;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .button {
+    padding: 13px 24px;
+    font-size: 15px;
+  }
+}

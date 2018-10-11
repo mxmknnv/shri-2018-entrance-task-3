@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500,700&subset=cyrillic');
+@import './lib/minireset.min.css';
+@import 'header.css';
+@import 'button.css';
+@import 'popup.css';
+@import '/table/table.css';
+@import '/redactor/redactor.css';
+
+body {
+  font-family: 'Helvetica Neue', 'Open Sans', sans-serif;
+  min-width: 360px;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+  max-width: 1283px;
+  min-height: 100vh;
+}
+
+.content {
+  display: flex;
+  flex-grow: 1;
+
+  position: relative;
+}

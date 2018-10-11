@@ -1,0 +1,151 @@
+:root {
+  --cell-width: 23px;
+  --cell-mobile-width: 27px;
+  --cell-height: 23px;
+  --cell-mobile-height: 27px;
+  --cell-margin-right: 3px;
+}
+
+.calendar {
+  position: absolute;
+  z-index: 50;
+
+  height: 230px;
+  padding: 16px 35px;
+
+  box-shadow: 0 1px 8px 0 rgba(0, 44, 92, 0.28);
+  border-radius: 4px;
+  background: #fff;
+}
+
+.calendar__months {
+  display: flex;
+}
+
+.calendar__month {
+  padding: 0 10px;
+}
+
+.calendar__title {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  color: #000;
+}
+
+.calendar__day-names {
+  display: flex;
+}
+
+.calendar__day-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: var(--cell-width);
+  height: var(--cell-height);
+  margin-right: var(--cell-margin-right);
+
+  user-select: none;
+  font-weight: 400;
+  font-size: 12px;
+  color: #888;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.calendar__week {
+  display: flex;
+  margin-bottom: 3px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.calendar__day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: var(--cell-width);
+  height: var(--cell-height);
+  margin-right: var(--cell-margin-right);
+
+  font-weight: 400;
+  font-size: 12px;
+  color: #000;
+
+  user-select: none;
+  cursor: pointer;
+
+  &:hover {
+    outline: 2px solid #ffd42b;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.calendar__day_placeholder:hover {
+    cursor: default;
+    outline: none;
+  }
+
+  &.calendar__day_today {
+    border-radius: 50%;
+    background: #f33;
+    color: #fff;
+  }
+}
+
+.calendar__button {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  display: inline-block;
+  width: 24px;
+  height: 150px;
+
+  background-repeat: no-repeat;
+  background-size: 10px;
+  cursor: pointer;
+
+  &[data-type="left"] {
+    background-image: url('./assets/arrow-left.svg');
+    background-position: 6px center;
+
+    left: 15px;
+  }
+
+  &[data-type="right"] {
+    background-image: url('./assets/arrow-right.svg');
+    background-position: 9px center;
+
+    right: 15px;
+  }
+}
+
+@media (max-width: 750px) {
+  .calendar {
+    height: 245px;
+    padding: 16px 40px;
+  }
+
+  .calendar__month:first-child,
+  .calendar__month:last-child {
+    display: none;
+  }
+
+  .calendar__day,
+  .calendar__day-name {
+    width: var(--cell-mobile-width);
+    height: var(--cell-mobile-height);
+    font-size: 14px;
+  }
+}

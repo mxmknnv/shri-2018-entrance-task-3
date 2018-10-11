@@ -1,0 +1,96 @@
+:root {
+  --border-size: 1px;
+}
+
+.plate {
+  flex: none;
+  position: relative;
+}
+
+.plate__box {
+  display: flex;
+  align-items: center;
+
+  width: 246px;
+  height: calc(46px + var(--border-size));
+  padding: 0 25px;
+
+  border-bottom: var(--border-size) solid #e9ecef;
+  background-color: #fff;
+}
+
+.plate__date {
+  font-weight: 500;
+  font-size: 15px;
+  color: #000;
+
+  cursor: pointer;
+
+  &_active {
+    color: #0070e0;
+  }
+}
+
+.plate__button {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+
+  border-radius: 50%;
+  cursor: pointer;
+
+  background-color: #e9ecef;
+  background-repeat: no-repeat;
+  background-size: 7px;
+
+  &[data-type="left"] {
+    background-image: url('./assets/arrow-left.svg');
+    background-position: 7px center;
+
+    margin-right: auto;
+  }
+
+  &[data-type="right"] {
+    background-image: url('./assets/arrow-right.svg');
+    background-position: 10px center;
+
+    margin-left: auto;
+  }
+}
+
+.plate__calendar {
+  top: 45px;
+  left: 24px;
+}
+
+@media (max-width: 500px) {
+  .plate {
+    position: absolute;
+    width: 100%;
+  }
+
+  .plate__box {
+    width: 100%;
+    height: calc(56px + var(--border-size));
+  }
+
+  .plate__button {
+    width: 32px;
+    height: 32px;
+    background-size: 9px;
+
+    &[data-type="left"] {
+      background-position: 10px center;
+    }
+
+    &[data-type="right"] {
+      background-position: 13px center;
+    }
+  }
+
+  .plate__calendar {
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}

@@ -1,0 +1,168 @@
+.field {
+  position: relative;
+
+  &_date {
+    margin-right: 16px;
+  }
+
+  &_time-start {
+    margin-right: 22px;
+  }
+
+  &_time-start::after {
+    position: absolute;
+    top: 32px;
+    right: -18px;
+
+    content: '—';
+
+    font-weight: 700;
+    font-size: 13px;
+    color: #000;
+  }
+}
+
+.field__label {
+  display: inline-block;
+  margin-bottom: 5px;
+
+  font-weight: 700;
+  font-size: 13px;
+  color: #000;
+}
+
+.field__wrapper {
+  position: relative;
+}
+
+.field__input {
+  width: 420px;
+  height: 38px;
+
+  font-weight: 400;
+  font-size: 13px;
+  color: #000;
+  letter-spacing: 0.47px;
+
+  padding: 0 10px;
+  border: 2px solid #e9ecef;
+  border-radius: 4px;
+  background: #fff;
+
+  appearance: none;
+  outline: none;
+
+  &_with-icon {
+    padding-right: 46px;
+  }
+
+  &_date {
+    width: 238px;
+  }
+
+  &_time {
+    width: 72px;
+  }
+
+  &:hover,
+  &:focus {
+    border: 2px solid #007dff;
+  }
+
+  &_warning {
+    border: 2px solid red;
+  }
+}
+
+.field__calendar {
+  top: 45px;
+  left: -110%;
+}
+
+.field__members {
+  margin-top: 12px;
+}
+
+.field__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 46px;
+  height: 100%;
+
+  opacity: 0.3;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &[data-type="close"] {
+    background-image: url('./assets/close.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 9px;
+  }
+
+  &[data-type="calendar"] {
+    background-image: url('./assets/calendar.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  .field {
+    &_date {
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
+
+    &_time-start::after {
+     top: 35px;
+    }
+  }
+
+  .field__input {
+    width: 328px;
+    height: 44px;
+
+    font-size: 15px;
+    letter-spacing: 0;
+
+    &_date {
+      width: 328px;
+    }
+
+    &_time {
+      display: block;
+      width: 153px;
+    }
+  }
+
+  .field__icon {
+    &[data-type="close"] {
+      background-size: 13px;
+    }
+
+    &[data-type="calendar"] {
+      background-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 903px) {
+  .field__calendar {
+    top: 45px;
+    left: -50%;
+  }
+}
+
+@media (max-width: 750px) {
+  .field__calendar {
+    top: 45px;
+    left: 0;
+  }
+}

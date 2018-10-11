@@ -1,0 +1,61 @@
+@import 'plate.css';
+@import 'calendar.css';
+@import 'catalog.css';
+@import 'tooltip.css';
+
+:root {
+  --border-size: 1px;
+  --date-height-mobile: 56px;
+  --timeline-height-mobile: 32px;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  overflow-x: scroll;
+}
+
+.table__header {
+  display: flex;
+  flex-direction: row;
+  flex: none;
+  height: 47px;
+}
+
+.table__message {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.table__content {
+  display: flex;
+  flex-grow: 1;
+}
+
+.timeline {
+  background-color: #fff;
+}
+
+.timeline__svg {}
+
+.diagram {
+  position: relative;
+}
+
+.diagram__svg {
+  height: 100%;
+  vertical-align: middle;
+}
+
+@media (max-width: 500px) {
+  .table__header {
+    flex-direction: column;
+    height: calc(var(--date-height-mobile) + var(--timeline-height-mobile) + 2 * var(--border-size));
+  }
+
+  .timeline {
+    margin-top: 57px;
+  }
+}

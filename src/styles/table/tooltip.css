@@ -1,0 +1,127 @@
+.tooltip {
+  position: absolute;
+
+  width: 338px;
+  height: 113px;
+  padding: 14px 48px 14px 16px;
+
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 16px 0 rgba(0, 44, 92, 0.28);
+}
+
+.tooltip_ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tooltip__event-title {
+  margin-bottom: 7px;
+
+  font-weight: 700;
+  font-size: 15px;
+  color: #000;
+}
+
+.tooltip__event-description {
+  font-weight: 400;
+  font-size: 13px;
+  color: #000;
+}
+
+.tooltip__button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+
+  border-radius: 50%;
+  cursor: pointer;
+
+  background-image: url('./assets/edit.svg');
+  background-repeat: no-repeat;
+  background-size: 11px;
+  background-position: center;
+  background-color: #e9ecef;
+}
+
+.tooltip__user-block {
+  margin-top: 16px;
+
+  white-space: nowrap;
+}
+
+.tooltip__user-avatar {
+  width: 24px;
+  height: 24px;
+
+  border-radius: 50%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+.tooltip__user-description {
+  margin-left: 8px;
+
+  font-weight: 400;
+  font-size: 13px;
+  color: #9fa6ae;
+}
+
+.tooltip__user-login {
+  display: inline-block;
+  max-width: 170px;
+
+  vertical-align: sub;
+  color: #000;
+}
+
+.tooltip__arrow {
+  position: absolute;
+
+  border-width: 7px;
+  border-style: solid;
+}
+
+.tooltip__arrow_top {
+  bottom: 100%;
+  border-color: transparent transparent #fff transparent;
+}
+
+.tooltip__arrow_bottom {
+  top: 100%;
+  border-color: #fff transparent transparent transparent;
+}
+
+@media (max-width: 500px) {
+  .tooltip {
+    width: 360px;
+    height: 129px;
+  }
+
+  .tooltip__event-title {
+    font-size: 20px;
+  }
+
+  .tooltip__event-description {
+    font-size: 15px;
+    color: #333;
+  }
+
+  .tooltip__user-description {
+    font-size: 15px;
+  }
+
+  .tooltip__user-login {
+    font-size: 15px;
+  }
+
+  .tooltip__user-avatar {
+    width: 32px;
+    height: 32px;
+  }
+}
